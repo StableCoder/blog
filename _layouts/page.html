@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<section class="post">
+    <header class="major">
+        <h1>{{ page.title | escape }}</h1>
+        {% if page.brief %}
+        <p>{{ page.brief }}</p>
+        {% endif %}
+    </header>
+
+    {{ content }}
+</section>

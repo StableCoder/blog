@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<!-- Posts -->
+<section class="posts">
+    {% for post in paginator.posts %} 
+        {% include post-blurb.html %} 
+    {% endfor %}
+</section>
+
+<footer>
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Prev</a>
+        {% endif %}
+        <span class="extra">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% endif %}
+    </div>
+</footer>

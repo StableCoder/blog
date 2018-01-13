@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section class="post">
+    <header class="major">
+        <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
+        <h1>{{ page.title | escape }}</h1>
+        {% if page.brief %}
+        <p>{{ page.brief }}</p>
+        {% endif %}
+    </header>
+
+    {% if page.featured_image %}
+    <a class="image fit">
+        <img src="{{ page.featured_image | relative_url }}" alt="" />
+    </a>
+    {% endif %} {% if page.summary %}
+    <p>{{ page.summary }}</p>
+    {% endif %} {{ content }}
+</section>

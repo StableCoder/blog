@@ -1,0 +1,47 @@
+<!-- Nav -->
+<nav id="nav">
+    <ul class="links">
+        <li>
+            <a href="{{ "index.html" | relative_url}}">Home</a>
+        </li>
+        {% for page in site.pages %} 
+        {% if page.title %}
+        <li>
+            <a href="{{ page.url | relative_url }}">
+                {{ page.title | escape }}
+            </a>
+        </li>
+        {% endif %} 
+        {% endfor %}
+    </ul>
+    <ul class="icons">
+        {% if site.twitter_username %}
+        <li>
+            <a href="#" class="icon fa-twitter">
+                <span class="label">Twitter</span>
+            </a>
+        </li>
+        {% endif %}
+        {% if site.facebook_username %}
+        <li>
+            <a href="#" class="icon fa-facebook">
+                <span class="label">Facebook</span>
+            </a>
+        </li>
+        {% endif %}
+        {% if site.instagram_username %}
+        <li>
+            <a href="#" class="icon fa-instagram">
+                <span class="label">Instagram</span>
+            </a>
+        </li>
+        {% endif %}
+        {% if site.github_username %}
+        <li>
+            <a href="https://github.com/{{ site.github_username }}" class="icon fa-github">
+                <span class="label">GitHub</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
