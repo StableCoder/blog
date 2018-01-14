@@ -4,13 +4,12 @@
         <h2>
             <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
+        {% if post.brief %}
+        <p>{{ post.brief }}</p>
+        {% endif %}
     </header>
-    {% if post.featured_image %}
-    <a href="{{ post.url | relative_url }}" class="image fit">
-        <img src="{{ post.featured_image | relative_url }}" alt="" />
-    </a>
-    {% endif %} {% if post.brief %}
-    <p>{{ post.brief }}</p>
+    {% if post.summary %}
+    <p>{{ post.summary }}</p>
     {% endif %}
     <ul class="actions">
         <li>
