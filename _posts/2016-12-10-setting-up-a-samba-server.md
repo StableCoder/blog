@@ -3,7 +3,7 @@ layout: post
 title: Setting up a Samba Server
 brief: It's almost like cloud storage, except secured at home.
 date: 2016-12-10 09:58:00 -0400
-tags: samba, linux, bash
+tags: linux
 summary: The ability to have files accessible from any device connected to the network is a great way to store and consume one's data. For example, on my home network, I have a central basic Linux file server, which stores all my music, videos, pictures, etc, such that I can play my 250GB music collection on any of my other connected devices, such as my dekstop, tablet, and phone, without requiring massive storage for the files on each device, or have to worry about updating the collection on each device.
 ---
 

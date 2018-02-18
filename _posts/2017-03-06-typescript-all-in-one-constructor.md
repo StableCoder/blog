@@ -3,7 +3,7 @@ layout: post
 title: An all-in-one constructor for typescript classes
 brief: Only one constructor, multiple possibilities
 date: 2017-03-06 12:00 UTC
-tags: software, typescript, javascript
+tags: software typescript javascript
 summary: Because Typescript is just a superset of javascript, having different constructors from C++ is something that I do indeed somtimes miss. In this case, Java/Typescript classes can only have a single constructor, whereas many times I wish to have differing levels of constructor capability.
 ---
 
