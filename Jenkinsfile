@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build and Deploy') {
             agent {
-                label 'linux && jekyll & aws'
+                label 'jekyll && awscli'
             }
             steps {
                 sh '''
