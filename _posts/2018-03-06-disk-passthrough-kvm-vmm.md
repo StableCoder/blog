@@ -7,7 +7,7 @@ tags: kvm linux unix software
 summary: Through just the Virtual Machine Manager UI, there's not a real way to perform plain disk passthrough to a virtual machine. However, to perform a disk passthrough isn't all that hard with just a tweak to a file.
 ---
 
-Quit simply, if you're comfortable with the Virutal Machine manager UI, create a VM like normal, and when it comes to giving it a storage volume, just give it a tiny dummy volume that will be discarded ASAP.
+Quite simply, if you're comfortable with the Virutal Machine manager UI, create a VM like normal, and when it comes to giving it a storage volume, just give it a tiny dummy volume that will be discarded ASAP.
 
 Then, find the directory where the virtual machine configurations XML files are found. A typical location would be `/etc/libvirt/qemu/` but could differ.
 
