@@ -31,7 +31,7 @@ A quick rundown of the tools available, and what they do:
 
 ## Adding to CMake
 
-As these sanitizers usually are incompatible with one another, the most logical way to implement them is to integrate them as CMake build types, so the programs are built optimally for the sanitizer. As such, creating the new build types with the appropriate flags would create something like:
+As these sanitizers usually are incompatible with one another, the most logical way to implement them is to integrate them as CMake build types, so the programs are built optimally for the sanitizer. To give optimal results, these build types ignore all other compiler flags given by the user, and apply to both the C and C++ languages.
 ```
 # Build Types
 set(CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE}
