@@ -2,7 +2,7 @@
 layout: post
 title: Jenkins Agent Service
 brief: Getting Jenkins to run automatically on boot.
-date: 2018-02-01 12:00 UTC
+date: 2018-03-23 12:00 UTC
 tags: jenkins systemctl scheduler agent linux windows
 summary: While this can be reapplied more broadly, this is specifically about getting the Jenkins agents to run automatically on boot, for both Linux and Windows.
 ---
