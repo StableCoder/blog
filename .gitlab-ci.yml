@@ -1,0 +1,27 @@
+Build Site:
+  image: stabletec/jekyll:latest
+  except:
+    - master
+  tags:
+    - linux-docker
+  before_script:
+    - bundle install
+  script:
+    - bundle exec jekyll build
+
+Deploy Site:
+  image: stabletec/jekyll:latest
+  only:
+    - master
+  tags:
+    - linux-docker
+  variables:
+    AWS_ACCESS_KEY_ID: $STABLETEC_AWS_ACCESS_KEY
+    AWS_SECRET_ACCESS_KEY: $STABLETEC_AWS_SECRET_KEY
+  before_script:
+    - bundle install
+    - pip3 install awscli
+  script:
+    - bundle exec jekyll build
+    - aws s3 rm $STABLECODER_S3_SITE/* --recursive
+    - aws s3 cp ./_site $STABLECODER_S3_SITE --recursive
