@@ -2,6 +2,8 @@ Build Site:
   image: stabletec/jekyll:latest
   except:
     - master
+  tags:
+    - linux-docker
   before_script:
     - bundle install
   script:
@@ -11,6 +13,8 @@ Deploy Site:
   image: stabletec/jekyll:latest
   only:
     - master
+  tags:
+    - linux-docker
   variables:
     AWS_ACCESS_KEY_ID: $STABLETEC_AWS_ACCESS_KEY
     AWS_SECRET_ACCESS_KEY: $STABLETEC_AWS_SECRET_KEY
