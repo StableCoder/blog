@@ -32,7 +32,6 @@ This can be worked around by adding the `--cap-add` to add Linux capabilities li
 ```yaml
   [runners.docker]
     ...
-    cap_add = ["NET_ADMIN"]
-    cap_drop = ["DAC_OVERRIDE"]
+    cap_add = ["SYS_PTRACE"]
     ...
 ```
