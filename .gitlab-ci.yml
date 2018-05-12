@@ -3,7 +3,8 @@ Build Site:
   except:
     - master
   tags:
-    - linux-docker
+    - linux
+    - docker
   before_script:
     - bundle install
   script:
@@ -14,7 +15,8 @@ Deploy Site:
   only:
     - master
   tags:
-    - linux-docker
+    - linux
+    - docker
   variables:
     AWS_ACCESS_KEY_ID: $STABLETEC_AWS_ACCESS_KEY
     AWS_SECRET_ACCESS_KEY: $STABLETEC_AWS_SECRET_KEY
