@@ -82,7 +82,7 @@ ScalarSet(T init = 0) : stats{} {
     std::fill_n(stats.data(), NumValues, init);
 }
 
-/// \brief Adds the individual elements of a *similar* same-type scalar set.
+/// \brief Adds the individual elements of a *different type* but same flag set.
 template &lt;typename T, class EnumClass, int NumValues>
 template &lt;typename Y>
 EnumeratedScalarSet&lt;T, EnumClass, NumValues>
@@ -166,4 +166,4 @@ Agility 5
 Luck 9
 ```
 
-The full example can be found [here](/assets/posts/scalar-sets/scalar-fallout.zip).
+The full example can be found [here](/code/scalar-sets/).
