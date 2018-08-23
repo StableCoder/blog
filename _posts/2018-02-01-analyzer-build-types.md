@@ -90,7 +90,7 @@ set(CMAKE_CXX_FLAGS_UBSAN
 ```
 
 Building with any of the above targets, using the option during CMake's generation such as `-DCMAKE_BUILD_TYPE=asan` would build all libraries and executables with the diagnostic tooling for AddressSanitizer linked in, and then running the programs would then be able to output messages such as in AddressSanitizer's case:
-<pre class="prettyprint">
+<pre class="brush: bash">
 =================================================================
 ==20865==ERROR: AddressSanitizer: heap-use-after-free on address 0x614000000044 at 
 pc 0x561435ccba1f bp 0x7ffd162bbce0 sp 0x7ffd162bbcd0
@@ -153,4 +153,4 @@ And again, because these are integrated into CMake, it become trivial to run the
 
 ## Source Code
 
-Full fledged (and possibly updated) sources of this can be found under the Apache 2.0 license [here](https://github.com/StableTec/cmake-scripts).
+Full fledged (and possibly updated) sources of this can be found under the Apache 2.0 license [here](https://git.stabletec.com/other/cmake-scripts).

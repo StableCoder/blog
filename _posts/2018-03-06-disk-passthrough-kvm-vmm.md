@@ -12,23 +12,23 @@ Quite simply, if you're comfortable with the Virutal Machine manager UI, create 
 Then, find the directory where the virtual machine configurations XML files are found. A typical location would be `/etc/libvirt/qemu/` but could differ.
 
 In that, find the section where the stub of a storage volume exists, it'll look something like this:
-```
-<disk type='file' device='disk'>
-  <driver name='qemu' type='qcow2'/>
-  <source file='/home/user/VM/HDD-Stub.qcow2'/>
-  <target dev='hda' bus='ide'/>
-  <address type='drive' controller='0' bus='0' target='0' unit='0'/>
-</disk>
-```
+<pre class="brush: xml">
+&lt;disk type='file' device='disk'>
+  &lt;driver name='qemu' type='qcow2'/>
+  &lt;source file='/home/user/VM/HDD-Stub.qcow2'/>
+  &lt;target dev='hda' bus='ide'/>
+  &lt;address type='drive' controller='0' bus='0' target='0' unit='0'/>
+&lt;/disk>
+</pre>
 
 and swap the type from a file to a block, and change the driver to a raw type, and finally the source from a file to a device, which is the particular disk drive to passthrough.
 
-```
-<disk type='block' device='disk'>
-  <driver name='qemu' type='raw'/>
-  <source dev='/dev/sdb'/>
-  <target dev='vdb' bus='virtio'/>
-</disk>
-```
+<pre class="brush: xml">
+&lt;disk type='block' device='disk'>
+  &lt;driver name='qemu' type='raw'/>
+  &lt;source dev='/dev/sdb'/>
+  &lt;target dev='vdb' bus='virtio'/>
+&lt;/disk>
+</pre>
 
 The target/bus depends on what type of interface or drivers one will have available. Most notably during a Windows installation a virtio bus won't be recognized right away, requiring extra drivers to be given at installation time from somewhere reputable such as Red Hat or the [Fedora Project](https://docs.fedoraproject.org/quick-docs/en-US/creating-windows-virtual-machines-using-virtio-drivers.html).

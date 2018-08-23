@@ -13,9 +13,9 @@ I'm only going over systemctl-based Linux here, always got to look forwards.
 
 Anyways, first is of course to build a user to run the jenkins agent. Having an agent run as root or the regular user account is just asking for serious trouble, as any job that is run *could* contain malicious intent if the source repositories aren't monitored closely. This user should have their own home directory, so that the Jenkins agent jar and working directories can be kept safely isolated there. However, don't give a password, so that no one can login in externally directly to them, as in some cases you may give them some sudo access to certain directories, such as to docker.
 
-```sh
+<pre class="brush: bash">
 $ useradd -m jenkins-runner
-```
+</pre>
 
 Now, create an entry in `/etc/systemd/system` directory to create a systemctl service that outlines it's properties, such that it can be maniuplated like any other service. Be sure to add the user to run the service as.
 
@@ -41,9 +41,9 @@ How to allow use of docker a non-privileged user?
 
 Best case is to use/create the docker group that has automatic non-sudo access to docker itself.
 
-```sh
+<pre class="brush: bash">
 groupadd docker
 gpasswd -a jenkins-runner docker
 # Refresh user groups
 newgrp docker
-```
+</pre>

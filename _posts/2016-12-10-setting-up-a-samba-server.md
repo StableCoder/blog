@@ -19,28 +19,28 @@ Samba will allow us the ability to access files from the file server as if the f
 
 To start, one needs to know which folder they want to share, and needs Samba installed on their machine.
 
-```bash
+<pre class="brush: bash">
 # Debian Based
 apt-get install samba
 # Arch
 pacman -S samba
-```
+</pre>
 
 Then, one needs to create a user to login to the samba share, to ensure not anyone can access it. The -a means to add a user. One can also remove a user using the -x option.
 
-```bash
+<pre class="brush: bash">
 smbpasswd -a sambauser
-```
+</pre>
 
 Next, we need to configure Samba, using it's config files, so, as an admin or super user, enter:
 
-```bash
+<pre class="brush: bash">
 nano /etc/samba/smb.conf
-```
+</pre>
 
 And scroll down to the bottom and add the options for the new Samba share.
 
-```bash
+```
 [shareName]
 path = /path/to/share
 public = no
@@ -52,7 +52,7 @@ browsable = yes
 
 Of course, changine options as needed. As an example, here's my media share options:
 
-```bash
+```
 [sambadisk]
 comment =  Files Share
 public = no
@@ -65,9 +65,9 @@ path = /sambadisk
 
 Once the options are set, save and close the file, then restart the Samba service to let it grab the new options.
 
-```bash
+<pre class="brush: bash">
 service smbd restart
-```
+</pre>
 
 ## Accessing the Samba share on Windows
 
@@ -77,7 +77,7 @@ Accessing the Samba share on Windows is as easy as creting a shortcut. So, on th
 
 Then type in the network location of the new shared folder
 
-```bash
+```
 \\SERVER-IP-ADDRESS\SHARENAME
 ```
 

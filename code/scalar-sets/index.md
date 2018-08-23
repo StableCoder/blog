@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Scalar Sets Example
+title: Scalar Sets Code
 ---
 
 ## Raw
@@ -12,7 +12,7 @@ title: Scalar Sets Example
 
 ### main.cpp
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 #include "scalar_set.hpp"
 
 #include &lt;iostream>
@@ -76,7 +76,7 @@ int main() {
 
 ### scalar_set.hpp
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 #include &lt;algorithm>
 #include &lt;array>
 #include &lt;cstdint>

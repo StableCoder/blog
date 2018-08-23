@@ -23,7 +23,7 @@ As one could deduce, the precision of floats when dealing with tenths, hundredth
 
 So, to start a fixed point class, we need a templated object, that allows us to specify the underlying type, and the number of digits of precision:
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 template &lt;typename T, uint8_t Precision>
 class fixed_point
 {
@@ -35,7 +35,7 @@ private:
 
 Next, we require a large number of overloade constructors and operators to perform arithmetic with both basic types and other variants of fixed_point templates:
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
     ...
     
 public:
@@ -79,7 +79,7 @@ public:
 Finally, we require the ability to convert the value stored to all the regular basic types, and the ability to determine basic stats of the type:
 
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
     ...
 
     ///&lt; Other Functions
@@ -97,7 +97,7 @@ Finally, we require the ability to convert the value stored to all the regular b
 However, a large point of trouble is, of course, interacting with other template instantiations of the fixed_point class, most importantly when the precision between two types is different. For these types, there is a more involved, but still simplistic code behind.
 
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 fixed_point&lt;T, Precision>& operator+=(const fixed_point&lt;Y, Z>& rhs)
 {
     // These, being templated, should collapse into a simple one-line function
@@ -123,7 +123,7 @@ fixed_point&lt;T, Precision>& operator+=(const fixed_point&lt;Y, Z>& rhs)
 
 The code will, for each template variant, collapse down to a single operation, because first of all, the Precision and Z are fixed as template parameters, thus only one of the three code paths will always be taken, thus the compiler will optimize out the unused ones. Secondly, the multiplier, being a constexpr value, will be evaluated at compile time, such that no actual calculations are done for determining the multiplier during runtime. Thus, typically, the top operation will essentially turn into this:
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 fixed_point&lt;T, Precision>& operator+=(const fixed_point&lt;Y, Z>& rhs)
 {
     m_Value += rhs.getRaw() %op% %compile-time-constant%;
@@ -133,7 +133,7 @@ fixed_point&lt;T, Precision>& operator+=(const fixed_point&lt;Y, Z>& rhs)
 
 With all of the overloaded basic arithmetic operators, the fixed_point class type can interact with all the other types, and have arithmetic performed with little effort required on the part of the developer, like so:
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
     fixed_point&lt;int32_t, 2> test;
     fixed_point&lt;uint32_t, 3> test2;
 
@@ -153,3 +153,5 @@ With all of the overloaded basic arithmetic operators, the fixed_point class typ
 In the end, of course, what have we gained? Well, we have a new easy-to-use type that allows for a larger range of accuracy than floats, provided you know the precision you want to keep, and that it doesn't overflow the known maximum, which are both easily accessible. Not only that, but the fixed_point doesn't suffer from the floating point precision issues, it's a fully round (divided) value, and can hold more digits because there's no bits taken up by the exponent.
 
 Basically, the whole thing is a more accurate, but range limited type, that takes the same amount of memory. On some architecture types, even may operate faster.
+
+Code can be found [here](/code/fixed-point/).

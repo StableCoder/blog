@@ -15,7 +15,7 @@ There are times when putting together a set of like scalar values can be useful,
 
 In a more traditional setting, this would be represented either as an array, where the values are selected by offsets, or even individually specified get/set functions:
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 enum {
     eStrength,
     ePerception,
@@ -44,7 +44,7 @@ Items can easily be accessed by using the offset of the type one wishes to acces
 
 ### Individually Specified
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 struct Special2 {
     int strength;
     int perception;
@@ -65,7 +65,7 @@ This is a fair amount of boilerplate code, and improvements to one struct's inne
 
 With the use of templates, one can have the best of all worlds, generic code using strict enum class flags, and classes that autogenerate functions that operate on the whole set together that can be adjusted quickly and easily.
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 /// \brief A template for use for tying together a bunch of scalar variables, performing access with
 /// an enum class.
 /// \tparam T The underlying type of the template (ex int, float, etc.)
@@ -84,7 +84,7 @@ class ScalarSet{
 </pre>
 
 Most functions internally can be implemented trivially when operating across an array, as it just requires iterating over the internal array.
-<pre class="prettyprint">
+<pre class="brush: cpp">
 ScalarSet(T init = 0) : stats{} {
     std::fill_n(stats.data(), NumValues, init);
 }
@@ -113,7 +113,7 @@ ScalarSet &operator+=(const Y rhs) noexcept{
 </pre>
 
 And access can be restricted to a easy-to-use enum class flag set instead of individually implemented accessors through an operator[].
-<pre class="prettyprint">
+<pre class="brush: cpp">
 T &operator[](const EnumClass rhs) noexcept {
     return stats[static_cast&lt;typename std::underlying_type&lt;EnumClass>::type>(rhs)];
 }
@@ -121,7 +121,7 @@ T &operator[](const EnumClass rhs) noexcept {
 
 Filling out the rest of the function's arithmetic operators would then net an exquisite class that can be shrunk, expanded, and reused quite easily (via the associated flags), with both operations on individual values and the whole set together without issue.
 
-<pre class="prettyprint">
+<pre class="brush: cpp">
 enum class Special {
     Strength,
     Perception,

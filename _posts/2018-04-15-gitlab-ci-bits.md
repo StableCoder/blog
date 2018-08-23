@@ -13,7 +13,7 @@ While a regular CI docker runner can run docker images, there are times when one
 
 Often, especially on SELinux, one will also have to modify the docker runner config's `volumes` value to also include the docker socket that's being passed through, to allow it to succeed:
 
-```yaml
+```
   [runners.docker]
     ...
     privileged = true
@@ -29,7 +29,7 @@ Especially in my case, attempting to run the [MemorySanitizer or LeakSanitizer](
 
 This can be worked around by adding the `--cap-add` to add Linux capabilities listed [here](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities). To add them to the Gitlab-spawned docker images, however, simply add the same-named cpabilities to the GitlabRunner config like so:
 
-```yaml
+```
   [runners.docker]
     ...
     cap_add = ["SYS_PTRACE"]

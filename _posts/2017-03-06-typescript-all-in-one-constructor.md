@@ -13,7 +13,7 @@ In this case, I have the desire for a constructor that can create a new object, 
 
 The interface type has, as is typical, the minimum set of required items that the class needs to function, and at least the getter ones.
 
-<pre class="prettyprint">
+<pre class="brush: typescript">
 interface IKeyframe {
     time: number;
     region: string;
@@ -32,7 +32,7 @@ This has the benefit of being able to take in either of the below options and cr
 - Raw data object(such as from an API)
 - Already constructed class
 
-<pre class="prettyprint">
+<pre class="brush: typescript">
 export class Keyframe implements IKeyframe {
     protected data: IKeyframe;
 
