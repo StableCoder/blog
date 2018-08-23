@@ -2,6 +2,7 @@
 layout: page
 title: Powershell Tidbits
 brief: Some estranged pieces of acquired knowledge.
+top_post: true
 ---
 
 This page is just filled with powershell oddities that I found useful, and I'm sure others will too.
