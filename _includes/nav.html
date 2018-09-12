@@ -4,7 +4,7 @@
         <li>
             <a href="{{ "index.html" | relative_url}}">Home</a>
         </li>
-        {% for page in site.pages %} 
+        {% for page in site.pages %}
         {% if page.title %}
         {% if page.top_post %}
         <li>
@@ -13,7 +13,7 @@
             </a>
         </li>
         {% endif %}
-        {% endif %} 
+        {% endif %}
         {% endfor %}
     </ul>
     <ul class="icons">
@@ -21,6 +21,20 @@
         <li>
             <a href="#" class="icon fa-twitter">
                 <span class="label">Twitter</span>
+            </a>
+        </li>
+        {% endif %}
+        {% if site.twitch_username %}
+        <li>
+            <a href="https://www.twitch.tv/{{ site.twitch_username }}" class="icon fa-twitch">
+                <span class="label">Twitch</span>
+            </a>
+        </li>
+        {% endif %}
+        {% if site.youtube_channel %}
+        <li>
+            <a href="https://www.youtube.com/channel/{{ site.youtube_channel }}" class="icon fa-youtube">
+                <span class="label">Youtube</span>
             </a>
         </li>
         {% endif %}
@@ -47,7 +61,7 @@
         {% endif %}
         <li>
             <a href="https://git.stabletec.com" class="icon fa-git">
-                <span class="label">Gitlab</span>
+                <span class="label">GitLab</span>
             </a>
         </li>
     </ul>
