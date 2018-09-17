@@ -151,4 +151,4 @@ vk::Result err = m_device.createShaderModule(&moduleCI,
 
 ## Source Code
 
-Sources can be found [here](https://git.stabletec.com/utilities/vk-shader-to-binary).
+Sources can be found [here](https://git.stabletec.com/utilities/vksbc).
