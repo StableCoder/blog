@@ -93,9 +93,9 @@ $env:CXX="clang-cl"
 The build process is the same as for MSVC. The main difference will be during makefile generation, where CMake will identify the compilers as `Clang 7.0.0` or similar.
 
 <pre class="brush: powershell">
-# Build
 cmake . -Bbuild-clang-cl -G "NMake Makefiles"
-cd build-clang-cl && nmake
+cd build-clang-cl
+nmake
 .\testExe.exe
 </pre>
 
@@ -104,7 +104,7 @@ cd build-clang-cl && nmake
 Like the above, this alternative compiles using the clang compiler, but uses LLVM's LLD linker, and LLVM's AR archiver.
 
 This does selection does present some problems, but is mostly usable:
-- Build targets follow the Unix pattern. This means libraries are build as `.a` archives, and executables are build without the `.exe` extension, necessitating a rename to run on Windows. But they **do** run.
+- Build targets follow the Unix pattern. This means libraries are build as `.a` archives, and executables are build without the `.exe` extension, necessitating a rename to run on Windows. But they *do* run.
 - LLVM on Windows itself doesn't seem capable of generating shared objects, so any shared targets will be statically linked anyways.
 - CMake doesn't try to detect lld on Windows, so some overrides need to be performed on generation.
 
@@ -141,7 +141,6 @@ After, any executable targets need to be renamed with the '.exe' extension for W
 cmake . -Bbuild-clang -G "NMake Makefiles" -DCMAKE_C_COMPILER_ID="Clang" -DCMAKE_CXX_COMPILER_ID="Clang" -DCMAKE_SYSTEM_NAME="Generic" -DCMAKE_AR="C:\Program Files\LLVM\bin\llvm-ar.exe"
 cd build-clang && nmake
 Rename-Item -Path testExe -NewName testExe.exe
-.\testExe.exe
 </pre>
 
 # MinGW Based
@@ -206,10 +205,9 @@ $env:CXX="g++"
 Building is also just as simple, by just generating the makefile and then calling mingw32-make, MinGW's version of make on Windows.
 
 <pre class="brush: powershell">
-cmake . -Bbuild -G "MinGW Makefiles"
-cd build-clang
+cmake . -Bbuild-gcc -G "MinGW Makefiles"
+cd build-gcc
 mingw32-make
-.\testExe.exe
 </pre>
 
 ## Clang
