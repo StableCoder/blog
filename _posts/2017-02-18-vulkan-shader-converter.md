@@ -1,9 +1,8 @@
 ---
 layout: post
 title: SPIR-V Shader Binary Converter
-brief: Making shaders easier in small test programs
 date: 2017-02-18 12:00 UTC
-tags: vulkan, c++, software
+tags: vulkan c++
 summary: Sometimes, when creating small programs, almost demo programs, one doesn't want to have to import or have an extra file around just containing the SPIR-V binary for a Vulkan program. Often, the solution is to embed the shader binaries straight into the source code. What follows is a simple program that does just that.
 featured_image: assets/featured/vulkan-shader-binary.png
 ---

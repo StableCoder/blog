@@ -1,6 +1,6 @@
 ---
 layout: tags
 title: Posts by Tag
-brief: Previous posts by tag
+summary: Previous posts by tag
 top_post: true
 ---

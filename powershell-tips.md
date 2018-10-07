@@ -1,15 +1,13 @@
 ---
 layout: page
 title: Powershell Tidbits
-brief: Some estranged pieces of acquired knowledge.
+summary: This page is just filled with powershell oddities that I found useful, and I'm sure others will too.
 top_post: true
 ---
 
-This page is just filled with powershell oddities that I found useful, and I'm sure others will too.
-
 ## Environment Variables
 
-Rather than the `$envVar` of *nix or `%envVar` of the older command prompt, the following is the pattern for powershell:
+Rather than the `$envVar` of *nix or `%envVar%` of the older command prompt, the following is the pattern for powershell:
 <pre class="brush: powershell">
 $env:envVar
 </pre>

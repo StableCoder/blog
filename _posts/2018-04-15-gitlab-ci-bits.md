@@ -1,13 +1,12 @@
 ---
 layout: post
 title: Gitlab CI Advanced Use Tips
-brief: Items for advanced GitlabCI use.
 date: 2018-04-15 12:00 UTC
-tags: gitlab gitlabci linux
+tags: git linux
 summary: While for the most part the Gitlab CI Runner documentation is great, there are a few options that aren't as known that are useful for more advanced use or requirements.
 ---
 
-# Privileged Docker Runner
+## Privileged Docker Runner
 
 While a regular CI docker runner can run docker images, there are times when one would wish to be able to build Docker images as well, from within the GitlabCI docker runner. As stated in the official documentation [here](https://docs.gitlab.com/runner/executors/docker.html#the-privileged-mode), one needs to set the config for the CI runner to have `privileged = true`, however this alone is not enough.
 
@@ -21,7 +20,7 @@ Often, especially on SELinux, one will also have to modify the docker runner con
     ...
 ```
 
-# CAP_ADD
+## CAP_ADD
 
 There are often times when a docker container may require enhanced access to the underlying kernel to perform what you want.
 

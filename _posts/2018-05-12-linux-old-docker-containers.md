@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Some Docker containers won't start
-brief: Notably CentOS6 on Linux 4.15+
 date: 2018-05-12 12:00 UTC
-tags: linux docker centos
-summary: On newer kernels, some Docker containers may not start correctly, often giving nonsensical errors.
+tags: linux docker
+summary: On newer kernels, some Docker containers may not start correctly, often giving nonsensical errors. Notably CentOS6 images on Linux 4.15+.
 ---
 
 This can be fixed, as found [here](https://bbs.archlinux.org/viewtopic.php?id=234282).

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Integrating clang-tools with CMake
-brief: CMake and clang-tools. A match made in heaven?
 date: 2018-01-01 12:00 UTC
-tags: software cmake clang c++ c format tidy
+tags: cmake c++
 summary: The clang tools, clang-format and clang-tidy can be immensly useful, both for software development on local machines and as passes in a CI pipeline. This is especially true when they are integrated into a CMake script, where new targets 'format' and 'tidy' can be exist.
 ---
 

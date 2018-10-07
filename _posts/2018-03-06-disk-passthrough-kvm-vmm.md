@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Disk Passthrough for KVM and VMM
-brief: Just a little note for those who could use it.
 date: 2018-03-06 12:00 UTC
-tags: kvm linux unix software
+tags: kvm linux
 summary: Through just the Virtual Machine Manager UI, there's not a real way to perform plain disk passthrough to a virtual machine. However, to perform a disk passthrough isn't all that hard with just a tweak to a file.
 ---
 

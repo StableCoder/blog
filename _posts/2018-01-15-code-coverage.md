@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Adding C++ code coverage with CMake and GCC or Clang
-brief: CMake and code coverage statistics. For the data nerds.
 date: 2018-01-15 12:00 UTC
-tags: software cmake clang c++ c gcc
+tags: cmake c++
 summary: Code coverage gives the ability to determine which sections of code are used, and how much, helping to prevent issues from sections of code that aren't run during tests and thus could potentially fail in production.
 ---
 

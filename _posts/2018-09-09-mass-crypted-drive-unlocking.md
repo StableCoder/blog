@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Mounting mass encrypted drives in Linux
-brief: Nobody likes to do things manually
 date: 2018-09-09 00:00:00 -0000
 tags : linux
 summary: Building a bash script for automating the boring bits of unlocking encrypted disk blocks.

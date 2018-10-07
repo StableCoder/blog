@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Using one value to share many
-brief: Re-using a regular unsigned integer to convey multiple values.
 date: 2018-07-28 00:00:00 -0000
 tags : ecs
-summary: One of the most fundamental items in any system, oftware or otherwise, is to be able to identify something uniquely.
+summary: One of the most fundamental items in any system, software or otherwise, is to be able to identify something uniquely. This can be accomplished by re-using a regular unsigned integer to convey multiple values.
 ---
 With the last post, we have an alright ability to identify an incredible number of individual entities, with some embedded information within their IDs. Now what is needed is the ability to store the data related to the objects, with the ability to easily access them.
 

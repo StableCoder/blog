@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Fixed Point Precision Type
-brief: Because sometimes floats are not enough.
 date: 2017-06-25 21:23 UTC
-tags: c++ stec software
+tags: c++
 summary: One of the most valuable basic types in computer science is the floating point type. The float is that allows for a massive range of storable values, at the cost of some precision after the value becomes large enough, due to the fact that floats can only store ~7.2 decimal digits. Thus, if we wish to keep a certain fixed amount or precision, we need to either put coded limits around the use of particular floats, or just create our own fixed point type.
 ---
 

@@ -1,15 +1,14 @@
 ---
 layout: post
 title: Compiler Options of Windows
-brief: There's more than you'd think.
 date: 2018-10-06 00:00:00 -0000
-tags : c++, windows, msvc, gcc, clang, llvm
+tags : c++ windows
 summary: While Microsoft's MSVC may be synonymous with Windows development, there are others.
 ---
 
 While there may be other compilers, such as Intel's, we're talking about freely available or of the 'mainstream' variety. This includes the 'big three': MSVC, GCC and clang.
 
-# Windows SDK Based
+## Windows SDK Based
 
 Microsoft releases the tools and libraries required to build for it's own platform through [Visual Studio](https://visualstudio.microsoft.com/). From this, there are two required items, the MSVC compiler itself, and the Windows SDK.
 
@@ -143,7 +142,7 @@ cd build-clang && nmake
 Rename-Item -Path testExe -NewName testExe.exe
 </pre>
 
-# MinGW Based
+## MinGW Based
 
 The 'Minimal GNU for Windows', these compilers utilize a full alternative to MS's toolchain, doing an effective job of replacing all the headers and libraries for operating on Windows, although extra DLL's need to be linked in to accomplish this.
 

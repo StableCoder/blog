@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Collecting scalar values together in C++11
-brief: Making life easier through enum flags, structs and offsets.
 date: 2018-08-22 00:00:00 -0000
-tags : c++, software
-summary: Recreating Fallout's SPECIAL reliably, quickly, efficiently, and safely.
+tags : c++
+summary: Making life easier through enum flags, structs and offsets, and recreating Fallout's SPECIAL reliably, quickly, efficiently, and safely.
 ---
 
 There are times when putting together a set of like scalar values can be useful, without having to explictly create them in a class. Typically, these values are denominations of the same idea or principle, and where operations should be accomplished on either the individual parts, or the whole set together. As an example, in many RPGs are many sets of numerical values that represent traits. For example in Fallout characters have basic stats represented by the 'SPECIAL' system. 

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Integrating sanitizer tools to CMake builds
-brief: Even more tools at your fingertips. What's not to like?
 date: 2018-02-01 12:00 UTC
-tags: software cmake llvm clang gcc c++ linux unix
+tags: cmake c++ linux
 summary: Previously we added tools for code coverage and static analysis via clang-tidy. Now comes the ability to perform better runtime testing through GCC and Clang's sanitizer tools, and integrating them with CMake.
 ---
 

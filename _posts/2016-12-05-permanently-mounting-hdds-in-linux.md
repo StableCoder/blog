@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Permanently Mounting Drives in Linux
-brief: Sometimes you have more than one drive.
 date: 2016-12-05 05:39:00 -0400
-tags : linux
-summary: Mounting a HDD in Linux is a pretty basic task, really. All you need to do is figure where you want the files to show up in the local filesystem, and figure out the device moniker Linux gave to your HDD.
+tags: linux
+summary: Mounting a HDD in Linux is a pretty basic task, really. All you need to do is figure where you want the files to show up in the local filesystem, and figure out the device ID of it.
 ---
 
 ## A place for the files to call home

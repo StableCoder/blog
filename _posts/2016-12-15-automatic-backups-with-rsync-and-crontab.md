@@ -1,10 +1,9 @@
 ---
 layout: post
 title: Automated backups with rsync and crontab
-brief: The goto post after you've learned the lesson.
 date: 2016-12-15 15:40:00 -0400
 tags: linux
-summary: Creating automated backups is, in fact, incredibly simple and easy. So simple, that one can set it up in less than two minutes, and is guarunteed to be the best thing EVER in case of HDD failure, or otherwise corruption.
+summary: The goto post after you've learned the lesson. Creating automated backups is, in fact, incredibly simple and easy. So simple, that one can set it up in less than two minutes, and is guarunteed to be the best thing EVER in case of HDD failure, or otherwise corruption.
 ---
 
 So, first thing, is to install rsync, which of course requires admin or super user priviledges.
