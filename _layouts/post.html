@@ -2,16 +2,14 @@
 layout: default
 ---
 
-<section class="post">
+<section>
+    <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
     <header class="major">
-        <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
         <h1>{{ page.title | escape }}</h1>
-        {% if page.brief %}
-        <p>{{ page.brief }}</p>
+        {% if page.summary %}
+        <p>{{ page.summary }}</p>
         {% endif %}
     </header>
 
-    {% if page.summary %}
-    <p>{{ page.summary }}</p>
-    {% endif %} {{ content }}
+    {{ content }}
 </section>

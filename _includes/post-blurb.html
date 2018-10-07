@@ -4,16 +4,13 @@
         <h2>
             <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
-        {% if post.brief %}
-        <p>{{ post.brief }}</p>
-        {% endif %}
     </header>
     {% if post.summary %}
     <p>{{ post.summary }}</p>
     {% endif %}
     <ul class="actions">
         <li>
-            <a href="{{ post.url | relative_url }}" class="button">Full Post</a>
+            <a href="{{ post.url | relative_url }}" class="button">More</a>
         </li>
     </ul>
 </article>

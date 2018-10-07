@@ -1,0 +1,18 @@
+@media screen and (min-width: 1280px) {
+    .syntaxhighlighter {
+        width: 100% !important;
+    }
+
+    .syntaxhighlighter a,
+    .syntaxhighlighter div,
+    .syntaxhighlighter code,
+    .syntaxhighlighter table,
+    .syntaxhighlighter table td,
+    .syntaxhighlighter table tr,
+    .syntaxhighlighter table tbody,
+    .syntaxhighlighter table thead,
+    .syntaxhighlighter table caption,
+    .syntaxhighlighter textarea {
+        max-width: 500px !important;
+    }
+}

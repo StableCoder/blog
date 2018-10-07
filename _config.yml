@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Stable Coder
+title: StableCoder
 email: gcave@stablecoder.ca
 description: >- # this means to ignore newlines until "baseurl:"
   Code Stuff
@@ -24,7 +24,7 @@ youtube_channel: UCtuqU8PT9ge4UzPHdstki1w
 twitch_username: stablecoder471
 
 # Build settings
-paginate: 8
+paginate: 15
 markdown: kramdown
 plugins:
   - jekyll-feed

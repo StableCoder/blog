@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
+	Editorial by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url}}" />
     <link type="text/css" rel="stylesheet" href="{{ "assets/css/theme.css" | relative_url}}" />
+    <link type="text/css" rel="stylesheet" href="{{ "assets/css/syntax-customizations.css" | relative_url}}" />
     <noscript>
         <link rel="stylesheet" href="{{ "assets/css/noscript.css" | relative_url}}" />
     </noscript>
@@ -26,44 +27,105 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-    
 </head>
 
-<body class="is-loading">
+<body class="is-preload">
 
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Header -->
-        <header id="header">
-            <a href="{{ "index.html" | relative_url}}" class="logo">{{ site.title }}</a>
-        </header>
-
-        {% include nav.html %}
-
         <!-- Main -->
         <div id="main">
+            <div class="inner">
 
-            {{ content }}
+                <!-- Header -->
+                <header id="header">
+                    <a href="{{ "index.html" | relative_url}}" class="logo"><strong>StableCoder</strong></a>
+                    <ul class="icons">
+                        {% include icons.html %}
+                    </ul>
+                </header>
+
+                <!-- Sections -->
+                <section>
+
+                    {{ content }}
+
+                </section>
+            </div>
 
         </div>
 
-        <!-- Copyright -->
-        <div id="copyright">
-            <ul>
-                <li>&copy; George Cave</li>
-                <li>Design:
-                    <a href="https://html5up.net">HTML5 UP</a>
-                </li>
-            </ul>
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li>
+                            <a href="{{ "index.html" | relative_url}}">Home</a>
+                        </li>
+                        {% for page in site.pages %}
+                        {% if page.title %}
+                        {% if page.top_post %}
+                        <li>
+                            <a href="{{ page.url | relative_url }}">
+                                {{ page.title | escape }}
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Latest Posts</h2>
+                    </header>
+                    <div class="mini-posts">
+                        {% for post in site.posts %}
+                        {% if forloop.index <= 4 %} <article>
+                            <a href="#">{{ post.title }}</a>
+                            {% if post.summary %}
+                            <p>{{ post.summary }}</p>
+                            {% endif %}
+                            </article>
+                            {% endif %}
+                            {% endfor %}
+                    </div>
+                </section>
+
+                <!-- Section -->
+                <section>
+                    <header class="major">
+                        <h2>Get in touch</h2>
+                    </header>
+                    <p>You never know.</p>
+                    <ul class="contact">
+                        <li class="fa-envelope-o"><a href="#">gcave@stablecoder.ca</a></li>
+                    </ul>
+                </section>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <p class="copyright">&copy; George Cave. All rights reserved.</a>
+                        Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                </footer>
+
+            </div>
         </div>
     </div>
 
     <!-- Scripts -->
     <script rel="text/javascript" src="{{ "assets/js/jquery.min.js" | relative_url}}"></script>
-    <script rel="text/javascript" src="{{ "assets/js/jquery.scrollex.min.js" | relative_url}}"></script>
-    <script rel="text/javascript" src="{{ "assets/js/jquery.scrolly.min.js" | relative_url}}"></script>
-    <script rel="text/javascript" src="{{ "assets/js/skel.min.js" | relative_url}}"></script>
+    <script rel="text/javascript" src="{{ "assets/js/browser.min.js" | relative_url}}"></script>
+    <script rel="text/javascript" src="{{ "assets/js/breakpoints.min.js" | relative_url}}"></script>
     <script rel="text/javascript" src="{{ "assets/js/util.js" | relative_url}}"></script>
     <script rel="text/javascript" src="{{ "assets/js/main.js" | relative_url}}"></script>
     <script rel="text/javascript" src="{{ "assets/js/syntaxhighlighter.js" | relative_url}}"></script>
