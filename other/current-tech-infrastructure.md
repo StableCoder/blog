@@ -1,0 +1,52 @@
+---
+layout: page
+title: Current Tech Infrastructure
+summary: Listing the current infrastructure I use
+---
+
+## Main Workstation
+
+Used as the main workstation for doing everything and primary GitLab builder for Linux/Docker jobs. And it doesn't ever break a sweat.
+
+OS: Arch<br/>
+CPU: AMD Threadripper 2990WX 32C/64T<br/>
+Motherboard: Gigabyte X399 Designare<br/>
+RAM: 32GB<br/>
+Storage: 240GHB ADATA NVME, 256GB WD Black NVME
+
+## Windows Builder
+
+The old workstation. Builder for all Windows jobs, as well as Windows/Docker builds.
+
+OS: Windows Server 1803<br/>
+CPU: AMD Threadripper 1950X 16C/32T<br/>
+Motherboard: Gigabyte X399 Designare<br/>
+RAM: 32GB<br/>
+Storage: 520GB Crucial SSD
+
+## Mid-Range Test Machine
+
+For mid-range performance testing.
+
+OS: Arch<br/>
+CPU: Intel i5 2500 4C<br/>
+Motherboard: ASUS P67<br/>
+Storage 512GB WD Black HDD<br/>
+
+## Low-Range Test Machine
+
+For low-range performance testing.
+
+OS: Arch<br/>
+CPU: Intel Celeron J1800 4C<br/>
+Motherboard: ASUS J1800I<br/>
+Storage: 512 GB WD Black HDD
+
+## File Server
+
+Self explanatory.
+
+OS: Arch<br/>
+CPU: Intel Celeron J4005 2C<br/>
+Motherboard: ASRock J4005M<br/>
+Storage: 128GB Crucial SSD, 12x 4TB HDD, 4x 1TB HDD
