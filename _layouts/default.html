@@ -91,7 +91,7 @@
                     <div class="mini-posts">
                         {% for post in site.posts %}
                         {% if forloop.index <= 4 %} <article>
-                            <a href="#">{{ post.title }}</a>
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                             {% if post.summary %}
                             <p>{{ post.summary }}</p>
                             {% endif %}
