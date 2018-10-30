@@ -35,7 +35,7 @@ wget http://releases.llvm.org/7.0.0/LLVM-7.0.0-win64.exe -OutFile llvm.exe -UseB
 rm .\llvm.exe
 </pre>
 
-## Microsoft's MSVC
+### Microsoft's MSVC
 
 The compiler that comes free from Microsoft, and usually bundled with Visual Studio installations.
 
@@ -65,7 +65,7 @@ cd build-msvc
 nmake
 </pre>
 
-## clang-cl
+### clang-cl
 
 The most well-known alternative to MSVC on Windows is clang-cl. While this compiles code using clang, it outputs objects that is compatible and links using Microsoft's linker.
 
@@ -98,12 +98,13 @@ nmake
 .\testExe.exe
 </pre>
 
-## clang with LLVM
+### clang with LLVM
 
 Like the above, this alternative compiles using the clang compiler, but uses LLVM's LLD linker, and LLVM's AR archiver.
 
 This does selection does present some problems, but is mostly usable:
 - Build targets follow the Unix pattern. This means libraries are build as `.a` archives, and executables are build without the `.exe` extension, necessitating a rename to run on Windows. But they *do* run.
+- Uses the traditional way of specifying options, ie `-std=c++17` rather than Microsoft's `/std=c++17` nonsense.
 - LLVM on Windows itself doesn't seem capable of generating shared objects, so any shared targets will be statically linked anyways.
 - CMake doesn't try to detect lld on Windows, so some overrides need to be performed on generation.
 
@@ -184,13 +185,13 @@ bash -lc 'pacman --noconfirm -S mingw64/mingw-w64-x86_64-clang mingw64/mingw-w64
 bash -lc 'pacman --noconfirm -Scc'
 </pre>
 
-## GCC
+### GCC
 
 The original [GNU Compiler Collection](https://gcc.gnu.org/), but running on and for Windows.
 
 #### Usage
 
-Setting up the environment is as simple as adding the toolchain to the PATH, andsetting the environment variable to tell CMake to target the specific compiler.
+Setting up the environment is as simple as adding the toolchain to the PATH, and setting the environment variable to tell CMake to target the specific compiler.
 
 <pre class="brush: powershell">
 # Adding the MinGW64 toolchain to PATH
@@ -209,13 +210,13 @@ cd build-gcc
 mingw32-make
 </pre>
 
-## Clang
+### Clang
 
 The same clang/LLVM project as earlier, but just using the MinGW set of headers and libraries for interfacing with Windows.
 
 #### Usage
 
-Setting up the environment is as simple as adding the toolchain to the PATH, andsetting the environment variable to tell CMake to target the specific compiler.
+Setting up the environment is as simple as adding the toolchain to the PATH, and setting the environment variable to tell CMake to target the specific compiler.
 
 <pre class="brush: powershell">
 # Adding the MinGW64 toolchain to PATH
