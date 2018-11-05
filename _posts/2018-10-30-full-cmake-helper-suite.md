@@ -29,7 +29,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 cppcheck is a similar tool to clang-tidy. include-what-you-use helps to organize headers for all files encompass all items being used in that file, without accidentally relying upon headers deep down a chain of other headers.
 
-For any of the tools, they can be setup by setting the respective variables with the desired options. As examples, the below code checks for th executable, and if found, setups the full command line options to use.
+For any of the tools, they can be setup by setting the respective variables with the desired options. As examples, the below code checks for the executable, and if found, setups the full command line options to use.
 
 #### Basic CMake Implementation (clang-tidy only)
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv) {
     return array[argc]; // BOOM
 }
 </pre>
-This obviously has a glaring error, where the array is being used after it has already been freed. Compiling and running the program however alls seems fine. It compiles, runs, and exits without letting on any issue. However, add the AddressSanitizer to the build, compile and run, then BAM:
+This obviously has a glaring error, where the array is being used after it has already been freed. Compiling and running the program however all seems fine. It compiles, runs, and exits without letting on any issue. However, add the AddressSanitizer to the build, compile and run, then BAM:
 <span class="image fit">
     <img src="/assets/posts/cmake-helper-suite/asan.png" />
 </span>
