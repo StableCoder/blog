@@ -14,7 +14,7 @@ Motherboard: Gigabyte X399 Designare<br/>
 RAM: 32GB ECC<br/>
 Storage: 240GHB ADATA NVME, 256GB WD Black NVME
 
-# Laptop - 2018 LG Gram 13"
+## Laptop - 2018 LG Gram 13"
 
 OS: Arch<br/>
 CPU: Intel Core i5 8250U<br/>
