@@ -14,6 +14,13 @@ Motherboard: Gigabyte X399 Designare<br/>
 RAM: 32GB ECC<br/>
 Storage: 240GHB ADATA NVME, 256GB WD Black NVME
 
+# Laptop - 2018 LG Gram 13"
+
+OS: Arch<br/>
+CPU: Intel Core i5 8250U<br/>
+RAM: 8GB<br/>
+Storage: 240GHB ADATA NVME, 256GB Micron NVME
+
 ## Windows Builder
 
 The old workstation. Builder for all Windows jobs, as well as Windows/Docker builds.
@@ -29,7 +36,7 @@ Storage: 520GB Crucial SSD
 For mid-performance testing.
 
 OS: Arch<br/>
-CPU: Intel i5 2500 4C<br/>
+CPU: Intel Core  i5 2500 4C<br/>
 Motherboard: ASUS P67<br/>
 RAM: 16GB<br/>
 Storage 512GB WD Black HDD
