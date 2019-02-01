@@ -30,4 +30,4 @@ and swap the type from a file to a block, and change the driver to a raw type, a
 &lt;/disk>
 </pre>
 
-The target/bus depends on what type of interface or drivers one will have available. Most notably during a Windows installation a virtio bus won't be recognized right away, requiring extra drivers to be given at installation time from somewhere reputable such as Red Hat or the [Fedora Project](https://docs.fedoraproject.org/quick-docs/en-US/creating-windows-virtual-machines-using-virtio-drivers.html).
+The target/bus depends on what type of interface or drivers one will have available. Most notably during a Windows installation a virtio bus won't be recognized right away, requiring extra drivers to be given at installation time from somewhere reputable such as Red Hat or the [Fedora Project](https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/index.html).
