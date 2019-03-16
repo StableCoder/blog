@@ -16,7 +16,7 @@ Open the default file for PulseAudio, found at `/etc/pulse/default.pa`.
 # Change this line
 load-module module-bluetooth-policy
 
-## To this
+# To this
 load-module module-bluetooth-policy auto_switch=2
 ```
 
