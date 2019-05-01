@@ -6,6 +6,8 @@ tags: cmake c++
 summary: Code coverage gives the ability to determine which sections of code are used, and how much, helping to prevent issues from sections of code that aren't run during tests and thus could potentially fail in production.
 ---
 
+**NOTE:** The content here has been superseeded by a better implementation outlined [here.]({% post_url 2018-10-30-full-cmake-helper-suite %})
+
 After the back of adding the basic [clang tools](/2018/01/01/cmake-clang-tools.html), the ball began rolling to see what else could be integrated into the project infrastructure using CMake. The code coverage tools are pretty unique in that they can be linked into a build just by adding extra compiler flags.
 
 ## Building

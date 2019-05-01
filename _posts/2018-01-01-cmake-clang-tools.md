@@ -6,6 +6,8 @@ tags: cmake c++
 summary: The clang tools, clang-format and clang-tidy can be immensly useful, both for software development on local machines and as passes in a CI pipeline. This is especially true when they are integrated into a CMake script, where new targets 'format' and 'tidy' can be exist.
 ---
 
+**NOTE:** The content here has been superseeded by a better implementation outlined [here.]({% post_url 2018-10-30-full-cmake-helper-suite %})
+
 ## clang-format
 
 This tool is useful for having to *not* worry about formatting anymore. When run, clang-format takes in a set of formatting rules that it will apply to all of the files given to it. I have used a multitude of programs before, typically those shipped with IDE's but they've always suffered from the issue of being IDE specific, whereas I change tools over time as new ones gain favour and the others lose it for whatever reason.  To learn more, checkout the documentation [here](https://clang.llvm.org/docs/ClangFormat.html).

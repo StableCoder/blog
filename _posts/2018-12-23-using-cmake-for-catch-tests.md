@@ -51,7 +51,7 @@ add_dependencies(catch git_catch)
 target_include_directories(catch PUBLIC ${source_dir}/single_include  ${source_dir}/single_include/catch2)
 ```
 
-## Pre-Compiling
+## Pre-Compilation
 
 As with any other extensive project, single-header includes typically have some form of integrated source, requiring some special define to compile some code (In this case, the macro of `CATCH_CONFIG_MAIN`). On smaller projects, or projects that have only a single testing binary, it's not much of a problem. You were going to have to compile it sometime anyways.
 

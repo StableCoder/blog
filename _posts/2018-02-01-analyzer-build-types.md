@@ -6,6 +6,8 @@ tags: cmake c++ linux
 summary: Previously we added tools for code coverage and static analysis via clang-tidy. Now comes the ability to perform better runtime testing through GCC and Clang's sanitizer tools, and integrating them with CMake.
 ---
 
+**NOTE:** The content here has been superseeded by a better implementation outlined [here.]({% post_url 2018-10-30-full-cmake-helper-suite %})
+
 ## The Sanitizers
 
 Sanitizers are tools that perform checks during a program's runtime and returns issues, and as such, along with unit testing, code coverage and static analysis, is another tool to add to the programmers toolbox. And of course, like the previous tools, are tragically simple to add into any project using CMake, allowing any project and developer to quickly and easily use.
