@@ -75,4 +75,4 @@ So, doing the above for a while, one will be able to sort out who actually needs
 
 ## Implementation
 
-A ready-to-go form of this can be found [here](https://git.stabletec.com/other/cmake-scripts) as the dependency-graph.cmake file.
+A ready-to-go form of this can be found [here](https://github.com/StableCoder/cmake-scripts) as the dependency-graph.cmake file.

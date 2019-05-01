@@ -36,7 +36,7 @@ Now, while that seems to work fine for the regular integrated terminal, attempti
             "shell": {
                 "executable": "cmd.exe",
                 "args": [
-                    "/d", "/c", "C:\\\cmder\\vendor\\init.bat", "&&"
+                    "/d", "/c", "<CMDER_ROOT>\\vendor\\init.bat", "&&"
                 ]
             }
         }

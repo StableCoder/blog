@@ -7,7 +7,7 @@ summary: Built over some time now, is a fair sized suite of tools and utilities 
 ---
 Note: This is a followup to the posts '[Integrating clang-tools with CMake]({{ "2018/01/01/cmake-clang-tools.html" | relative_url}})', '[Adding C++ code coverage with CMake and GCC or Clang]({{ "2018/01/15/code-coverage.html" | relative_url}})' and '[Integrating sanitizer tools to CMake builds]({{ "2018/02/01/analyzer-build-types.html" | relative_url}})', which details older versions of the same thing.
 
-##### Note: [All code below can be found in better pre-made scripts found here under the Apache 2.0 license.](https://git.stabletec.com/other/cmake-scripts)
+##### Note: [All code below can be found in better pre-made scripts found here under the Apache 2.0 license.](https://github.com/StableCoder/cmake-scripts)
 
 ## C++ Standards
 
@@ -139,4 +139,4 @@ add_custom_target(ccov-${TARGET_NAME}
 
 ## Ready-to-go implementation
 
-Located [here](https://git.stabletec.com/other/cmake-scripts), is a full advanced implementation of all the above and more, made easily accessible through a few functions and CMake switches/options. It contains all required documentation for use, as well as examples of code and a CI/CD pipeline that uses them.
+Located [here](https://github.com/StableCoder/cmake-scripts), is a full advanced implementation of all the above and more, made easily accessible through a few functions and CMake switches/options. It contains all required documentation for use, as well as examples of code and a CI/CD pipeline that uses them.

@@ -152,4 +152,4 @@ And again, because these are integrated into CMake, it become trivial to run the
 
 ## Source Code
 
-Full fledged (and possibly updated) sources of this can be found under the Apache 2.0 license [here](https://git.stabletec.com/other/cmake-scripts).
+Full fledged (and possibly updated) sources of this can be found under the Apache 2.0 license [here](https://github.com/StableCoder/cmake-scripts).

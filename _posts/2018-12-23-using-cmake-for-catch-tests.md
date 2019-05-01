@@ -87,4 +87,4 @@ Of course, the above setup can be done with practically any other single-header 
 
 ## Implementation
 
-A ready-to-go form of this can be found [here](https://git.stabletec.com/other/cmake-scripts) as the tests.cmake file.
+A ready-to-go form of this can be found [here](https://github.com/StableCoder/cmake-scripts) as the tests.cmake file.

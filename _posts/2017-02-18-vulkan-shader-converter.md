@@ -150,4 +150,4 @@ vk::Result err = m_device.createShaderModule(&moduleCI,
 
 ## Source Code
 
-Sources can be found [here](https://git.stabletec.com/utilities/vksbc).
+Sources can be found [here](https://github.com/StableCoder/vksbc).
